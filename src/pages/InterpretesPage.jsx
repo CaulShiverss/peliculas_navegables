@@ -1,6 +1,7 @@
 import GridLayout from "../components/GridLayout";
 import Card from "../components/Card";
 import peliculas from "../data/peliculas";
+import { Link } from "react-router-dom";
 
 function InterpretesPage() {
   return (
@@ -11,20 +12,21 @@ function InterpretesPage() {
         Listado de intérpretes disponibles:
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 w-full mt-8">
-          {peliculas
-          .map(pelicula =>
+      <section className="w-full mt-8">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 list-none p-0 items-stretch">
+          {peliculas.flatMap((pelicula) =>
             pelicula.actores.map((actor, index) => (
-              <Card
-                key={index}
-                nombre={actor.nombre}
-                foto={actor.imagen}
-              >
-                {actor.biografia}
-              </Card>
+              <li key={`${pelicula.id}-${index}`} className="h-full">
+                <Link to={`/interpretes/${index}-${pelicula.id}`} className="no-underline h-full block">
+                <Card nombre={actor.nombre} foto={actor.imagen}>
+                  {actor.biografia}
+                </Card>
+                </Link>
+              </li>
             ))
           )}
-        </div>
+        </ul>
+      </section>
     </GridLayout>
   )
 }

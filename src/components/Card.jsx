@@ -3,7 +3,7 @@ function Card(props) {
     return (
         <article
             tabIndex="0"
-            className="flex flex-col items-start gap-3 p-4 rounded-lg bg-[linear-gradient(0deg,rgba(247,247,247,1)_0%,rgba(247,247,247,1)_100%)] shadow-md hover:shadow-lg transition-shadow duration-300"
+            className="flex flex-col items-start items-start gap-3 p-4 rounded-lg bg-[linear-gradient(0deg,rgba(247,247,247,1)_0%,rgba(247,247,247,1)_100%)] shadow-md hover:shadow-lg transition-shadow duration-300 h-full"
             aria-label={`${nombre}`}
         >
             <figure className="w-full aspect-square rounded-lg bg-gray-100 overflow-hidden">

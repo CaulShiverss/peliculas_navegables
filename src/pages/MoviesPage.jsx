@@ -12,8 +12,8 @@ function MoviesPage() {
         Listado de peliculas disponibles:
       </p>
 
-      <section className="w-full mt-8">
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 list-none p-0 items-stretch">
+      <section className="w-full mt-8" aria-labelledby="peliculas-lista">
+        <ul id="peliculas-lista" aria-label="Listado de películas" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 list-none p-0 items-stretch">
           {peliculas.map((pelicula) => (
             <li key={pelicula.id} className="h-full">
               <Link to={`/peliculas/${pelicula.id}`} className="no-underline h-full block">

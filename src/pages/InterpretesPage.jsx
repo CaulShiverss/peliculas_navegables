@@ -12,8 +12,8 @@ function InterpretesPage() {
         Listado de intérpretes disponibles:
       </p>
 
-      <section className="w-full mt-8">
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 list-none p-0 items-stretch">
+      <section className="w-full mt-8" aria-labelledby="interpretes-lista">
+        <ul id="interpretes-lista" aria-label="Listado de intérpretes" className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1 list-none p-0 items-stretch">
           {peliculas.flatMap((pelicula) =>
             pelicula.actores.map((actor, index) => (
               <li key={`${pelicula.id}-${index}`} className="h-full">

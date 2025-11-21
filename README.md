@@ -1,8 +1,8 @@
-# React + Vite
+## Justificaciones
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+He decido hacer dos componentes MovieDetails y InterpreteDetails en lugar de un solo componente Details ya que ambas páginas siguen lógicas diferentes y hacer un solo componente con condicionales para mostrar su contenido me parecía un poco engorroso. Si en un futuro tengo que escalar la aplicación si que consideraría utilizar un solo componente pero por el momento he utilizado dos.
 
-Currently, two official plugins are available:
+## Accesibilidad
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación es compatible con el lector de pantalla del navegador y permite la navegación por tabs.
+
